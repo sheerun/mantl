@@ -57,6 +57,9 @@ the likelihood of mistakes. If you are working with a customized
 from it and ensure ``consul_dns_domain`` is set as desired in your
 ``security.yml``.
 
+As of Mantl 1.1, this option is no longer configurable, it is hardcoded to
+``consul``.
+
 Upgrade Distributive, Consul, Mesos, and Marathon
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
