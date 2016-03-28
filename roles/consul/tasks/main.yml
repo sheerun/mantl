@@ -65,7 +65,6 @@
     dest: /usr/local/bin/
     mode: 0755
   with_items:
-    - consul-wait-for-leader.sh
     - consul-rolling-restart.sh
     - check-service-active
   tags:
@@ -81,8 +80,8 @@
     - consul
 
 # Give consul time to elect a leader
-- name: wait for leader
-  command: /usr/local/bin/consul-wait-for-leader.sh
+- name: wait for leader election
+  command: /usr/bin/smlr http localhost/consul/v1/catalog/nodes
   tags:
     - consul
 
