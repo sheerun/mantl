@@ -23,7 +23,7 @@ sessionid=$(consul-cli kv-lock ${ccargs} locks/consul)
 sleep 5
 
 # Verify that there is a leader before releasing the lock and restarting
-/usr/bin/smlr http localhost/consul/v1/catalog/nodes
+/usr/bin/smlr http localhost:8500/v1/catalog/nodes
 
 # Release the lock
 consul-cli kv-unlock ${ccargs} locks/consul --session=${sessionid}

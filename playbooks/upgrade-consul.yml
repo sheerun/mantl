@@ -20,7 +20,7 @@
         state: restarted
  
     - name: wait for leader
-      command: /usr/bin/smlr http localhost/consul/v1/catalog/nodes
+      command: /usr/bin/smlr http localhost:8500/v1/catalog/nodes
 
     - name: create secure acl
       sudo: yes

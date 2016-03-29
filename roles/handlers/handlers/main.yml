@@ -10,7 +10,7 @@
     - wait for consul to listen
 
 - name: wait for consul to listen
-  command: /usr/bin/smlr http localhost/consul/v1/catalog/nodes
+  command: /usr/bin/smlr http localhost:8500/v1/catalog/nodes
 
 - name: reload consul-template
   sudo: yes
