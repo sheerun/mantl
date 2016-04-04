@@ -45,6 +45,7 @@
   gather_facts: no
   vars:
     mesos_mode: follower
+    zookeeper_server_group: role=control
   roles:
     - mesos
 
